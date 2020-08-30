@@ -3,3 +3,6 @@ yarn.lock
 yarn-error.log
 
 ormconfig.json
+
+tmp/*
+!tmp/.gitkeep
