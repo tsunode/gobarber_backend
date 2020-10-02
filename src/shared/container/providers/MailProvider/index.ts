@@ -1,4 +1,4 @@
-import { IMailProvider } from '@shared/container/providers/MailProvider/models/IMailProvider';
+import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
 import mailConfig from '@config/mail';
 import { container } from 'tsyringe';
 

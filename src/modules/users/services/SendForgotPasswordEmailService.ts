@@ -4,8 +4,6 @@ import AppError from '@shared/errors/AppError';
 import { injectable, inject } from 'tsyringe';
 import path from 'path';
 
-// import AppError from '@shared/errors/AppError';
-// import User from '../infra/typeorm/entities/User';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest {
