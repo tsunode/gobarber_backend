@@ -1,9 +1,9 @@
-import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
-import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
-import AppError from '@shared/errors/AppError';
-import { injectable, inject } from 'tsyringe';
 import path from 'path';
+import { injectable, inject } from 'tsyringe';
 
+import AppError from '@shared/errors/AppError';
+import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
+import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest {
@@ -49,7 +49,7 @@ class SendForgotPasswordEmailService {
         file: forgotPasswordTemplate,
         variables: {
           name: user.name,
-          link: `${process.env.APP_WEB_URL}/reset_password?token=${token}`,
+          link: `${process.env.APP_WEB_URL}/reset-password?token=${token}`,
         },
       },
     });

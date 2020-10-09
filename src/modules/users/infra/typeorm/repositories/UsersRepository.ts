@@ -1,4 +1,5 @@
 import { getRepository, Repository, Not } from 'typeorm';
+
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO';
