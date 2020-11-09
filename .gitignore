@@ -1,3 +1,8 @@
 /node_modules
+/coverage
+/dist
 yarn.lock
 yarn-error.log
+/tmp/uploads
+
+ormconfig.json
