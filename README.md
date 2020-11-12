@@ -30,22 +30,15 @@
 
 ## Como utilizar
 
-#### 2. Na raiz do projeto crie um arquivo '.env' seguindo o parâmetro do arquivo .env.example., os parâmetros AWS_ACCESS_KEY_ID
+#### 1. Na raiz do projeto crie um arquivo '.env' seguindo o parâmetro do arquivo .env.example., os parâmetros AWS_ACCESS_KEY_ID e AWS_SECRET_ACCESS_KEY são usados apenas em produção.
 
-#### 3. No mesmo arquivo .env, insisra a base_url da sua API (default port 3333).
-
-#### 4. Dentro da API (cd API), existe um arquivo <b>ormconfig.example.json</b> na raiz do projeto. crie um arquivo no mesmo padrão dele porém sem o example (ormconfig.example.json -> ormconfig.json) e altere os seguintes dados de acordo com o seu banco POSTGRES: host, port, username, password, database. As demais informações desse arquivo já está configurado.
+#### 2. Existe um arquivo <b>ormconfig.example.json</b> na raiz do projeto. crie um arquivo no mesmo padrão dele porém sem o example (ormconfig.example.json -> ormconfig.json) e altere os seguintes dados de acordo com o seu banco POSTGRES e MONGODB: host, port, username, password, database. As demais informações desse arquivo já está configurado.
 
 > Sem a configuração desse arquivo corretamente, a api não funcionará.
 
 <br>
 
 ## Iniciando a API
-
-#### Primeiro alterne para o diretório da API:
-```
-cd api
-```
 
 #### Execute o comando para instalações de dependências da API:
 
@@ -58,7 +51,7 @@ npm install
 ```
 
 #### Execute o comando para rodar as Migrations, que criará as tabelas no banco:
-> É importante que o passo 4 da sessão "Como Utilizar" esteje apontando para o banco corretamente.
+> É importante que os passos da sessão "Como Utilizar" esteje apontando para o banco corretamente.
 
 ```
 npm run typeorm migration:run
@@ -76,44 +69,4 @@ npm run dev:server
 ou
 
 yarn dev:server
-```
-
-## Iniciando o aplicativo Mobile
-
-#### Primeiro alterne para o diretório do MOBILE:
-> Caso esteja na pasta da API, não esqueça de retornar uma pasta primeiro (cd..)
-
-```
-cd mobile
-```
-
-#### Execute o comando para instalações de dependências do Mobile:
-
-```
-yarn
-
-ou
-
-npm install
-```
-
-#### Execute o comando para iniciar o aplicativo:
-> Certifique de configurar o emulador ou plugar o celular no computador
-
-```
-yarn android
-
-ou
-
-npm run android
-```
-
-ou
-
-```
-yarn ios
-
-ou
-
-npm run ios
 ```
