@@ -3,8 +3,14 @@
 /dist
 yarn.lock
 yarn-error.log
-/tmp/uploads
+
+ormconfig.json
+
+tmp/*
+!tmp/.gitkeep
+
+coverage
 
 .env
 
-ormconfig.json
+/dist
